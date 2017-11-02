@@ -3,13 +3,28 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/WebApplication2/src/java/mvc/mypage/mypageDao.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/WebApplication2/web/WEB-INF/myscript/pbl2.txt</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/WebApplication2/nbproject/build-impl.xml</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/WebApplication2/src/java/mvc/register/RegisterServlet.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/WebApplication2/web/mypage.jsp</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/WebApplication2/src/java/mvc/register/RegisterDao.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/WebApplication2/src/java/mvc/register/RegisterBean.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/comapanyDao.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/register/RegisterDao.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/index.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/CompanyBean.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/META-INF/context.xml</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/WEB-INF/web.xml</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/mypage.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/Profileservlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/MypageBean.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Validate.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/nbproject/build-impl.xml</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/mypageSelect.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/kanri.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kakunin/Kakuninservlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/register/RegisterServlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/Company.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kakunin/KakuninBean.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Loginservlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kakunin/KakuninDao.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/ProfileservletCompany.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/mypageDao.java</file>
         </group>
     </open-files>
 </project-private>

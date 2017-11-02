@@ -11,9 +11,9 @@ use pbl2;
 
 # テーブル user の作成
 create table user(
-	ID	varchar(14) primary key,
+	ID	varchar(70) primary key,
 	PASS	varchar(16) not null,
-	Mail 	varchar(30) not null
+	Mail 	varchar(50) not null
 	);
 
 # テーブル user へテストデータを入力
@@ -31,5 +31,15 @@ keep		varchar(120),
 image	mediumblob,
 post    varchar(20)
 
+);
+# テーブル userprof の作成
+create table subcompany(
+Email		varchar(30) primary key,
+Pass	varchar(15),
+Name            varchar(30),
+Address		varchar(60) ,
+Code		varchar(15),
+Url    varchar(100),
+Proess   varchar(3)
 );
 

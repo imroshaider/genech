@@ -23,7 +23,15 @@
     <servlet-name>Profileservlet</servlet-name>
 <servlet-class>mvc.mypage.Profileservlet</servlet-class>
  </servlet>
+ <servlet>
+    <servlet-name>ProfileservletCompany</servlet-name>
+<servlet-class>mvc.Companypage.ProfileservletCompany</servlet-class>
+</servlet>
 
+ <servlet>
+    <servlet-name>Kakuninservlet</servlet-name>
+<servlet-class>mvc.kakunin.Kakuninservlet</servlet-class>
+</servlet>
 
 
 <servlet-mapping>
@@ -41,6 +49,15 @@
 <servlet-mapping>
 <servlet-name>Profileservlet</servlet-name>
 <url-pattern>/Profileservlet</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+<servlet-name>ProfileservletCompany</servlet-name>
+<url-pattern>/ProfileservletCompany</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Kakuninservlet</servlet-name>
+<url-pattern>/Kakuninservlet</url-pattern>
 </servlet-mapping>
 
     <servlet>

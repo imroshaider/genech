@@ -24,6 +24,8 @@ public Profileservlet() {
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //Copying all the input parameters in to local variables
 HttpSession session = request.getSession();
+String hello= request.getParameter("hello");
+System.out.println("hell0");
 String id = (String)session.getAttribute("userid");
 String username = request.getParameter("username");
 String sex = request.getParameter("sex");

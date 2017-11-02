@@ -1,6 +1,4 @@
-
-
-<%@ page language="java" contentType="text/html; charset=utf-8" %>
+<%@page contentType="text/html; charset=UTF-8"%>
 <%@page import="java.io.File"%>
 <%@page import="java.io.BufferedInputStream"%>
 <%@page import="java.io.FileOutputStream"%>
@@ -8,6 +6,7 @@
 <%@page import="java.sql.Blob"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.PreparedStatement"%>
+
 <%@page import="java.sql.Connection"%>
 <%@page import="mvc.Database.DBConnection"%>
 <%@page import="mvc.login.Loginservlet"%>
@@ -30,16 +29,16 @@
 
 </head>
 <body>
-
-	<div class="container">
+<div class="container">
 	<div class="row">
 
-		<div class="page-header">
+	
+	<div class="page-header">
 
-		</div>
+	 </div>
 
-	<br>
-	 <%
+	</br>
+    <%
        Blob img = null;
        byte[ ] imgData = null ;
 //        LoginBean mypage= new LoginBean();
@@ -59,35 +58,58 @@ ResultSet x =preparedStatement.executeQuery();
 img=x.getBlob("image");
 imgData = img.getBytes(1,(int)img.length());
 FileOutputStream fo = new FileOutputStream("C:\\apache-tomcat-8.5.16\\webapps\\pbl3\\web\\Image\\himu11.jpg"); 
-fo.write(x.getBytes("image"));%>
+fo.write(x.getBytes("image"));
 
-	 <div class="col-xs-6 col-md-2"><center>
-	  <img src="img/00.jpg" class="img-circle img1"></br>
-	  name:神戸デンコ</br>
-		 <div>
-		<form action="profile.jsp" method="post">
+
+
+      %>
+    <div class="col-xs-6 col-md-2"><center>
+	  <img src="Image/himu11.jpg" class="img-circle img1"></br>
+	  name:imros</br>
+	  		<form action="profile.jsp" method="post">
 		<input type="submit" value="profile" class="btn btn-default" />
 		</form>
-		 <form action="logoutservlet" method="post">
-		 <input type="submit" value="Logout" class="btn btn-default" />
-		 </form>
+	 <form action="Logoutservlet" method="post">
+	 <input type="submit" value="Logout" class="btn btn-default" />
+	 </form>
 		 </div>
+	 
 	 </center></div>
 
-	 <div class="col-xs-6 col-md-7">
+	 <div class="col-xs-6 col-md-6">
 	  <form action="" method="GET">
 	   <div class="form-group">
-	    <label class="control-label">希望結果</label><br />
+	    <label class="control-label">オススメ旅行</label><br />
 	   </div>
 		 <div class="col-sm-6">
+			 <div class="panel panel-warning">
+				 <div class="panel-heading strong">日帰り食べ歩きプラン</div>
+				<div class="panel-body">評価:★★★★☆</div>
+				<ul class="list-group">
+	       		<li class="list-group-item">料金:8,000円~</li>
+				<li class="list-group-item">大阪府大阪市中央区道頓堀</li>
+				<li class="list-group-item">Booking.com</li>
+	       		<li class="list-group-item"><a href="">詳細はこちら</a></li>
+	   			</ul>
+			 </div>
 		 </div>
 		 	<div class="col-sm-6">
+			 	<div class="panel panel-warning">
+				 <div class="panel-heading strong">異人館観光<<素泊まり>></div>
+					 <div class="panel-body">評価:★★★☆☆</div>
+					 <ul class="list-group">
+					 <li class="list-group-item">料金:6,000円~</li>
+					 <li class="list-group-item">兵庫県神戸市中央区</li>
+					 <li class="list-group-item">Expedia</li>
+					 <li class="list-group-item"><a href="">詳細はこちら</a></li>
+					 </ul>
+			 </div>
 		 </div>
 	  </form>
 
 	</div>
 
-  <div class="col-xs-6 col-md-3 bg-warning">
+  <div class="col-xs-6 col-md-4 bg-warning">
    <form action="mypage1.jsp" method="POST">
 <div class="form-group">
     <label class="control-label">目的地①：</label>
@@ -149,13 +171,20 @@ fo.write(x.getBytes("image"));%>
  </div>
 
 </div>
-<%  fo.close();
+                   
+
+
+
+
+	
+                      <%  fo.close();
   }
  }
       catch(SQLException e)
 {
 e.printStackTrace();
 }
-        %>	
+        %>
+	
 </body>
 </html>

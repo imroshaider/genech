@@ -75,7 +75,7 @@
 	 <div align="center" class="form">
 	  <form action="Loginservlet" method="POST">
 	  <p>User ID</p>
-	   <p class="id"><input type="text" class="form-control" name="userid" autocomplete="off" style="width:200px;" maxlength="14"/></p>
+	   <p class="id"><input type="text" class="form-control" name="userid" autocomplete="off" style="width:200px;" maxlength="30"/></p>
       <p>Password</p>
        <p class="pass"><input type="password" class="form-control" name="password" style="width:200px;" maxlength="16"/></p>
 	  <div Aligin="left">

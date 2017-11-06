@@ -43,3 +43,14 @@ Url    varchar(100),
 Proess   varchar(3)
 );
 
+create table travelsearch(
+ID		varchar(20),
+Name	varchar(20),
+Des1    varchar(20),
+Des2    varchar(20),
+Des3	varchar(20),
+Cost    varchar(10),
+Hope	varchar(100),
+CheckIn      varchar(20),
+Checkout     varchar(20)
+);

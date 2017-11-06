@@ -32,6 +32,10 @@
     <servlet-name>Kakuninservlet</servlet-name>
 <servlet-class>mvc.kakunin.Kakuninservlet</servlet-class>
 </servlet>
+ <servlet>
+    <servlet-name>KibouServlet</servlet-name>
+<servlet-class>mvc.kibou.KibouServlet</servlet-class>
+</servlet>
 
 
 <servlet-mapping>
@@ -58,6 +62,10 @@
 <servlet-mapping>
 <servlet-name>Kakuninservlet</servlet-name>
 <url-pattern>/Kakuninservlet</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>KibouServlet</servlet-name>
+<url-pattern>/KibouServlet</url-pattern>
 </servlet-mapping>
 
     <servlet>

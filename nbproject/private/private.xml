@@ -6,6 +6,7 @@
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/comapanyDao.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/register/RegisterDao.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/CompanyBean.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/LoginBean.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/META-INF/context.xml</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/MypageBean.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/mypage1.jsp</file>
@@ -22,8 +23,10 @@
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/mypageDao.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/index.jsp</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/build.xml</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kibou/KibouDao.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/css/p_1.css</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/WEB-INF/web.xml</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/mypage.jsp</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/Profileservlet.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Validate.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/mypageSelect.java</file>

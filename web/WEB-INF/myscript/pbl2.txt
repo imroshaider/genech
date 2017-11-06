@@ -51,6 +51,7 @@ Des2    varchar(20),
 Des3	varchar(20),
 Cost    varchar(10),
 Hope	varchar(100),
+zikan varchar(50),
 CheckIn      varchar(20),
 Checkout     varchar(20)
 );

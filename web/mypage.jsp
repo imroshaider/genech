@@ -110,10 +110,10 @@ fo.write(x.getBytes("image"));
 	</div>
 
   <div class="col-xs-6 col-md-4 bg-warning">
-   <form action="mypage1.jsp" method="POST">
+   <form action="KibouServlet" method="POST">
 <div class="form-group">
     <label class="control-label">目的地①：</label>
-    <select class="form-control" style="width:120px;" id="destination">
+    <select class="form-control" style="width:120px;" name="Des1">
     <option value="area_null">希望なし</option>
     <option value="osaka">大阪府</option>
     <option value="kyoto">京都府</option>
@@ -124,7 +124,7 @@ fo.write(x.getBytes("image"));
 </div>
 <div class="form-group">
 	<label class="control-label">目的地②：</label>
-	<select class="form-control" style="width:120px;" id="destination">
+	<select class="form-control" style="width:120px;" name="Des2">
 	<option value="area_null">希望なし</option>
 	<option value="osaka">大阪府</option>
 	<option value="kyoto">京都府</option>
@@ -135,7 +135,7 @@ fo.write(x.getBytes("image"));
 </div>
 <div class="form-group">
 	<label class="control-label">目的地③：</label>
-	<select class="form-control" style="width:120px;" id="destination">
+	<select class="form-control" style="width:120px;" name="Des3">
 	<option value="area_null">希望なし</option>
 	<option value="osaka">大阪府</option>
 	<option value="kyoto">京都府</option>
@@ -146,7 +146,7 @@ fo.write(x.getBytes("image"));
 </div>
   <div class="form-group">
     <label class="control-label">予算：</label>
-    <select class="form-control" style="width:120px;" id="budget">
+    <select class="form-control" style="width:120px;" name="Cost">
       <option value="cost_null">希望なし</option>
       <option value="6000">～6000円</option>
       <option value="8000">～8000円</option>
@@ -155,13 +155,16 @@ fo.write(x.getBytes("image"));
       <option value="20000">20000円～</option>
     </select>
   </div>
+        <label class="control-label">希望：</label>
+         <input type="textarea" name="Hope">
    <div class="form-group">
      <label class="control-label">日程：</label>
      <p>
-     チェックイン：<input type="date" class="form-control" name="chekin"></p>
+     チェックイン：<input type="date" class="form-control" name="CheckIn"></p>
      <p>
-     チェックアウト：<input type="date" class="form-control" name="chekout"></p>
+     チェックアウト：<input type="date" class="form-control" name="Chekout"></p>
   　</div>
+       
     <div Align="right">
      <input type="submit" value="送信" class="btn btn-default" />
     </div>

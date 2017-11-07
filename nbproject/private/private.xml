@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/comapanyDao.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/register/RegisterDao.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/CompanyBean.java</file>
@@ -31,6 +32,12 @@
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Validate.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/mypageSelect.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Loginservlet.java</file>
+=======
+            <file>file:/C:/apache-tomcat-8.0.33/webapps/pbl3/web/mypage.jsp</file>
+            <file>file:/C:/apache-tomcat-8.0.33/webapps/pbl3/src/java/mvc/register/RegisterDao.java</file>
+            <file>file:/C:/apache-tomcat-8.0.33/webapps/pbl3/src/java/mvc/mypage/mypageDao.java</file>
+            <file>file:/C:/apache-tomcat-8.0.33/webapps/pbl3/nbproject/build-impl.xml</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>

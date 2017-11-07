@@ -25,7 +25,7 @@ FileInputStream fis=null;
 
 String query1  = "insert into userprof(ID,image) values (?,?)";
 preparedStatement = con.prepareStatement(query1); 
- File imagee= new File("C:\\apache-tomcat-8.5.16\\webapps\\pbl3\\web\\img\\himu1.jpg");
+ File imagee= new File("C:\\apache-tomcat-8.0.33\\webapps\\pbl3\\web\\img\\himu1.jpg");
     preparedStatement.setString(1, ID);
     
     fis=new FileInputStream(imagee);

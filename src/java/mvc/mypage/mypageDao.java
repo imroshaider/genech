@@ -28,7 +28,7 @@ String address = mypageBean.getAddress();
 String image = mypageBean.getImage();
 String user=null;
 
-  File imagee= new File("C:\\apache-tomcat-8.5.16\\webapps\\pbl3\\web\\Image\\" +image);
+  File imagee= new File("C:\\apache-tomcat-8.0.33\\webapps\\pbl3\\web\\Image\\" +image);
 
 try
 {

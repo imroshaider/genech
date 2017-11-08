@@ -57,7 +57,7 @@ ResultSet x =preparedStatement.executeQuery();
      String nishi=x.getString("name");
 img=x.getBlob("image");
 imgData = img.getBytes(1,(int)img.length());
-FileOutputStream fo = new FileOutputStream("C:\\apache-tomcat-8.0.33\\webapps\\pbl3\\web\\Image\\himu11.jpg"); 
+FileOutputStream fo = new FileOutputStream("C:\\apache-tomcat-8.5.16\\webapps\\pbl3\\web\\Image\\himu11.jpg"); 
 fo.write(x.getBytes("image"));
 
 

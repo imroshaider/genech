@@ -49,6 +49,7 @@ public String kibouupdate(KibouBean kibouBean) throws IOException
   String Hope = kibouBean.getHope();
   String Name=null;
   String zikan;
+  Integer count=0;
   zikan=sdf.format(cal.getTime())+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.DATE)+"-"+cal.get(Calendar.HOUR_OF_DAY)+"-"+cal.get(Calendar.MINUTE);
         
  
@@ -64,7 +65,7 @@ try
        Name =x.getString("name");
  }
 
-String query = "insert into travelsearch(ID,Name,Des1,Des2,Des3,Cost,Hope,zikan,CheckIn,Checkout) values (?,?,?,?,?,?,?,?,?,?)"; //Insert user details into the table 'USERS'
+String query = "insert into travelsearch(ID,Name,Des1,Des2,Des3,Cost,Hope,zikan,CheckIn,Checkout,count) values (?,?,?,?,?,?,?,?,?,?,?)"; //Insert user details into the table 'USERS'
 preparedStatement = con.prepareStatement(query); 
 
 //Making use of prepared statements here to insert bunch of data
@@ -78,7 +79,7 @@ preparedStatement.setString(7, Hope);
 preparedStatement.setString(8, zikan);
 preparedStatement.setString(9,CheckIn );
 preparedStatement.setString(10, Checkout);
-
+preparedStatement.setInt(11, count);
 
         int i=  preparedStatement.executeUpdate();
 

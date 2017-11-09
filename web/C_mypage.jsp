@@ -1,4 +1,16 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html; charset=UTF-8"%>
+<%@page import="java.io.File"%>
+<%@page import="java.io.BufferedInputStream"%>
+<%@page import="java.io.FileOutputStream"%>
+<%@page import="java.io.OutputStream"%>
+<%@page import="java.sql.Blob"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.PreparedStatement"%>
+
+<%@page import="java.sql.Connection"%>
+<%@page import="mvc.Database.DBConnection"%>
+<%@page import="mvc.login.Loginservlet"%>
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -14,13 +26,7 @@
 	<link href="css/login.css" rel="stylesheet">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style type="text/css">
+        <style type="text/css">
     .tab-box{
         padding: 20px;
         border: 1px solid #DDD;
@@ -42,7 +48,7 @@
 <body>
 
 	<div class="page-header text-center">
-	 <h1>Mypage</h1>
+	 <h1>EasyTravel</h1>
 	</div>
 	
 	<div class="container">
@@ -61,30 +67,132 @@
       		 <a href="#tab2" class="nav-link navbar-primary bg-primary" data-toggle="tab">提案済</a>
       		</li>
     	</ul>
-    
+       
 	<div class="tab-content">
-	 <div class="tab-pane active tab-box" id="tab1">
+           <!-- 以下新着タブ -->
+            <div class="tab-pane active" id="tab1">
 	 	<br><br>
-	 	test<br>
-	 	test<br>
-	 	test<br>
+			
+            <%
+     response.setIntHeader("Refresh", 20);
+    Connection con = DBConnection.createConnection();
+    PreparedStatement preparedStatement = null;
+      try{
+          String query = "select * from travelsearch where count ='0' order by zikan desc";
+          preparedStatement = con.prepareStatement(query);
+ResultSet x =preparedStatement.executeQuery();
+
+ while(x.next()){ %>
+                        <div class="col-sm-6">
+				<br>
+ 
+			<div class="panel panel-primary">
+			       <div class="panel-body"><div class="media">
+
+			           <a class="media-left" href="#">
+			           </a>
+
+			           <div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
+			          <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
+                                       <%  
+                                          out.println("<h4 class='media-heading'>" + x.getString("Name") +"</h4>");
+                                        out.println("<p>場所:" + x.getString("Des1") + "</p>");
+                                       
+			              out.println("<p>IN:" + x.getString("CheckIn") + "</p>");
+                                      out.println("<p>OUT:" + x.getString("Checkout") + "</p>");
+			              %>
+			</div>
+			</div>
+			<div class="panel-footer text-right">
+			<form action="">
+			    <div align="left"><strong>5</strong>件の企業が提案</div>
+			    <input type="submit" value="提案" name="plan" name="plan" class="btn btn-primary">
+			　</from>
+			
+			 </div>
+   
+	</div>
+                  </div>
 	 </div>
-	 <div class="tab-pane tab-box" id="tab2">
+ <% }
+
+  
+ }
+      catch(SQLException e)
+{
+e.printStackTrace();
+}
+        %>
+
+	</div>
+            <div class="tab-pane active" id="tab2" name="tab2">
 	 	<br><br>
-	 	テスト<br>
-	 	テスト<br>
-	 	テスト<br>
+			
+            <%
+     response.setIntHeader("Refresh", 20);
+//     Connection con = DBConnection.createConnection();
+//    PreparedStatement preparedStatement = null;
+      try{
+          String query = "select Name from travelsearch where count=!'0' order by zikan desc";
+          preparedStatement = con.prepareStatement(query);
+ResultSet x =preparedStatement.executeQuery();
+
+ while(x.next()){ %>
+                        <div class="col-sm-6">
+				<br>
+ 
+			<div class="panel panel-primary">
+			       <div class="panel-body"><div class="media">
+
+			           <a class="media-left" href="#">
+			           </a>
+
+			           <div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
+			          <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
+                                       <%  
+                                          out.println("<h4 class='media-heading'>" + x.getString("Name") +"</h4>");
+                                        out.println("<p>場所:" + x.getString("Des1") + "</p>");
+                                       
+			              out.println("<p>IN:" + x.getString("CheckIn") + "</p>");
+                                      out.println("<p>OUT:" + x.getString("Checkout") + "</p>");
+			              %>
+			</div>
+			</div>
+			<div class="panel-footer text-right">
+			<form action="">
+			    <div align="left"><strong>5</strong>件の企業が提案</div>
+			    <input type="submit" value="提案" name="plan" name="plan" class="btn btn-primary">
+			　</from>
+			
+			 </div>
+   
+	</div>
+                  </div>
 	 </div>
-	 </div>
-    </div>
-	
-	<div class="col-md-3">
+ <% }
+
+  
+ }
+      catch(SQLException e)
+{
+e.printStackTrace();
+}
+        %>
+     
+        	
+</div>
+        
+      </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3">
 		ranking
 	</div>
-	
-	</div>
-	</div>
-	
+                
+        
+
+
 <script src="//code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>

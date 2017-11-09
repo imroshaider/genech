@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/kanri.jsp</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kibou/KibouDao.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/mypage1.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/comapanyDao.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Loginservlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/C_mypage.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Logoutservlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/ProfileservletCompany.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/Profileservlet.java</file>
         </group>
     </open-files>
 </project-private>

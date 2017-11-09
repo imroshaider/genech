@@ -27,7 +27,16 @@ public class Loginservlet extends HttpServlet {
             HttpSession session = request.getSession();
              session.setAttribute("userid", userid);
              
-          response.sendRedirect("mypage.jsp");
+            
+         if(userid.contains("@"))
+          {
+              response.sendRedirect("C_mypage.jsp"); 
+           
+          }else
+          {
+                 response.sendRedirect("mypage.jsp");
+          } 
+       
         }
         else
         {

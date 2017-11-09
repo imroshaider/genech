@@ -42,7 +42,7 @@
 }
 
 
-    
+    }
 </style>
 </head>
 <body>
@@ -50,14 +50,14 @@
 	<div class="page-header text-center">
 	 <h1>EasyTravel</h1>
 	</div>
-	
+
 	<div class="container">
 	<div class="row">
-	
+
 	<div class="col-md-3">
 		menu
 	</div>
-	
+
 	<div class="col-md-6">
 		<ul class="nav nav-tabs">
       		<li class="nav-item">
@@ -67,6 +67,7 @@
       		 <a href="#tab2" class="nav-link navbar-primary bg-primary" data-toggle="tab">提案済</a>
       		</li>
     	</ul>
+<<<<<<< HEAD
        
 	<div class="tab-content">
            <!-- 以下新着タブ -->
@@ -86,6 +87,15 @@ ResultSet x =preparedStatement.executeQuery();
                         <div class="col-sm-6">
 				<br>
  
+=======
+
+	<div class="tab-content">
+		<!-- 以下新着タブ -->
+	 <div class="tab-pane active" id="tab1">
+	 	<br><br>
+			<div class="col-sm-6">
+				<br>
+>>>>>>> 859eabfa1d08531e4baeb3e311989dab117d297f
 			<div class="panel panel-primary">
 			       <div class="panel-body"><div class="media">
 
@@ -93,6 +103,7 @@ ResultSet x =preparedStatement.executeQuery();
 			           </a>
 
 			           <div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
+<<<<<<< HEAD
 			          <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
                                        <%  
                                           out.println("<h4 class='media-heading'>" + x.getString("Name") +"</h4>");
@@ -101,11 +112,19 @@ ResultSet x =preparedStatement.executeQuery();
 			              out.println("<p>IN:" + x.getString("CheckIn") + "</p>");
                                       out.println("<p>OUT:" + x.getString("Checkout") + "</p>");
 			              %>
+=======
+			               <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
+			               <p>場所:大阪府　予算:20000～</p>
+			               <p>IN:2017/12/4 16:00<br>
+			               OUT:2017/12/5 13:00</p>
+			           </div>
+>>>>>>> 859eabfa1d08531e4baeb3e311989dab117d297f
 			</div>
 			</div>
 			<div class="panel-footer text-right">
 			<form action="">
 			    <div align="left"><strong>5</strong>件の企業が提案</div>
+<<<<<<< HEAD
 			    <input type="submit" value="提案" name="plan" name="plan" class="btn btn-primary">
 			　</from>
 			
@@ -156,10 +175,64 @@ ResultSet x =preparedStatement.executeQuery();
 			              out.println("<p>IN:" + x.getString("CheckIn") + "</p>");
                                       out.println("<p>OUT:" + x.getString("Checkout") + "</p>");
 			              %>
+=======
+			    <input type="submit" value="提案" id="plan" name="plan" class="btn btn-primary">
+			　</from>
+			</div>
+			</div>
+			</div>
+
+
+			<div class="col-sm-6">
+			<br>
+			<div class="panel panel-primary">
+			       <div class="panel-body"><div class="media">
+
+			           <a class="media-left" href="#">
+			           </a>
+
+			           <div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
+			               <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
+			               <p>場所:兵庫県　予算:20000～</p>
+			               <p>IN:2017/12/3 16:00<br>
+			               OUT:2017/12/5 13:00</p>
+			           </div>
 			</div>
 			</div>
 			<div class="panel-footer text-right">
 			<form action="">
+			    <div align="left"><strong>10</strong>件の企業が提案</div>
+			    <input type="submit" value="提案" id="plan" name="plan" class="btn btn-primary">
+			　</from>
+			</div>
+			</div>
+			</div>
+
+	 </div>
+
+   <!-- 以下提案済みタブ -->
+	 <div class="tab-pane" id="tab2">
+	 	<br><br>
+			<div class="col-sm-6">
+				<br>
+			<div class="panel panel-primary">
+						 <div class="panel-body"><div class="media">
+
+								 <a class="media-left" href="#">
+								 </a>
+
+								 <div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
+										 <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
+										 <p>場所:和歌山県　予算:30000～</p>
+										 <p>IN:2017/12/6 16:00<br>
+										 OUT:2017/12/7 13:00</p>
+								 </div>
+>>>>>>> 859eabfa1d08531e4baeb3e311989dab117d297f
+			</div>
+			</div>
+			<div class="panel-footer text-right">
+			<form action="">
+<<<<<<< HEAD
 			    <div align="left"><strong>5</strong>件の企業が提案</div>
 			    <input type="submit" value="提案" name="plan" name="plan" class="btn btn-primary">
 			　</from>
@@ -192,6 +265,50 @@ e.printStackTrace();
                 
         
 
+=======
+					<div align="left"><strong>5</strong>件の企業が提案</div>
+					<input type="submit" value="提案済" id="plan" name="plan" class="btn btn-success">
+			　</from>
+			</div>
+			</div>
+			</div>
+
+
+			<div class="col-sm-6">
+			<br>
+			<div class="panel panel-primary">
+						 <div class="panel-body"><div class="media">
+
+								 <a class="media-left" href="#">
+								 </a>
+
+								 <div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
+										 <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
+										 <p>場所:兵庫県　予算:15000～</p>
+										 <p>IN:2017/12/2 16:00<br>
+										 OUT:2017/12/3 13:00</p>
+								 </div>
+			</div>
+			</div>
+			<div class="panel-footer text-right">
+			<form action="">
+					<div align="left"><strong>10</strong>件の企業が提案</div>
+					<input type="submit" value="提案済" id="plan" name="plan" class="btn btn-success">
+			　</from>
+			</div>
+			</div>
+			</div>
+	 </div>
+	 </div>
+    </div>
+
+	<div class="col-md-3">
+		ranking
+	</div>
+
+	</div>
+	</div>
+>>>>>>> 859eabfa1d08531e4baeb3e311989dab117d297f
 
 <script src="//code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>

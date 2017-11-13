@@ -84,7 +84,8 @@
 ResultSet x =preparedStatement.executeQuery();
 
  while(x.next()){ %>
-                        <div class="col-sm-6">
+
+		<div class="col-sm-6">
 				<br>
 
 			<div class="panel panel-primary">
@@ -94,29 +95,17 @@ ResultSet x =preparedStatement.executeQuery();
 			           </a>
 
 			           <div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
-			          <h4 class="media-heading">user名</h4>
-                                       <%
-                                          out.println("<h4 class='media-heading'>" + x.getString("Name") +"</h4>");
-                                        out.println("<p>場所:" + x.getString("Des1") + "</p>");
-
-			              out.println("<p>IN:" + x.getString("CheckIn") + "</p>");
-                                      out.println("<p>OUT:" + x.getString("Checkout") + "</p>");
-			              %>
-			</div>
-			</div>
-			<div class="panel-footer text-right">
-			<form action="">
-			    <div align="left"><strong>5</strong>件の企業が提案</div>
-                            <!--↓pop up-->
+			          <h4 class="media-heading">
+                                      <!--↓pop up-->
 			    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sampleModal">
-                             詳細
+                             user名
                             </button>
                         <!-- モーダル・ダイアログ -->
                             <div class="modal fade" id="sampleModal" tabindex="-1">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                <div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+															 <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
                                 </div>
                             <div class="modal-body">
                               <div class="box2">
@@ -131,7 +120,48 @@ ResultSet x =preparedStatement.executeQuery();
 
                             </div>
                             <div class="modal-footer">
-														<button type="button" class="btn btn-primary">提案</button>
+                            <button type="button" class="btn btn-primary">提案</button>
+                            </div>
+                            </div>
+                    </div>
+                    </div></h4>
+                                       <%
+                                          out.println("<h4 class='media-heading'>" + x.getString("Name") +"</h4>");
+                                        out.println("<p>場所:" + x.getString("Des1") + "</p>");
+
+			              out.println("<p>IN:" + x.getString("CheckIn") + "</p>");
+                                      out.println("<p>OUT:" + x.getString("Checkout") + "</p>");
+			              %>
+			</div>
+			</div>
+			<div class="panel-footer text-right">
+			<form action="">
+			    <div align="left"><strong>5</strong>件の企業が提案</div>
+                      <!--↓pop up-->
+			    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sampleModal">
+                             提案
+                            </button>
+                        <!-- モーダル・ダイアログ -->
+                            <div class="modal fade" id="sampleModal" tabindex="-1">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                               <div class="modal-header">
+															 <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                                </div>
+                            <div class="modal-body">
+                              <div class="box2">
+                              <span class="box-title">User Name</span>
+                                <table class="teble text-left"> <!-- thの中にデータいれる -->
+                                <tr><th>住所：</th><th></th></tr>
+                                <tr><th>趣味：</th><th></th></tr>
+                                <tr><th>過去の訪問：</th><th></th></tr>
+                                <tr><th>コメント：</th><th></th></tr>																<br>
+                                </table>
+                              </div>
+
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">提案</button>
                             </div>
                             </div>
                     </div>
@@ -166,20 +196,23 @@ e.printStackTrace();
           preparedStatement = con.prepareStatement(query);
 ResultSet x =preparedStatement.executeQuery();
 
- while(x.next()){ %>
-                        <div class="col-sm-6">
-				<br>
+ while(x.next()){
+%>
 
-			<div class="panel panel-primary">
-			       <div class="panel-body"><div class="media">
+        <div class="col-sm-6">
+            <br>
 
-			           <a class="media-left" href="#">
-			           </a>
+		<div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="media">
 
-			           <div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
-			          <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
+			<a class="media-left" href="#">
+			</a>
+
+			<div class="media-body"><!-- 必要なデータ　ユーザーの情報(ID,prof)、希望情報(場所、予算、チェックイン/アウト、提案数)　-->
+			   <h4 class="media-heading">user名</h4><!-- ユーザーリンククリックでプロフ表示 -->
                                        <%
-                                          out.println("<h4 class='media-heading'>" + x.getString("Name") +"</h4>");
+                                        out.println("<h4 class='media-heading'>" + x.getString("Name") +"</h4>");
                                         out.println("<p>場所:" + x.getString("Des1") + "</p>");
 
 			              out.println("<p>IN:" + x.getString("CheckIn") + "</p>");
@@ -187,16 +220,51 @@ ResultSet x =preparedStatement.executeQuery();
 			              %>
 			</div>
 			</div>
+                        
 			<div class="panel-footer text-right">
+                            
 			<form action="">
 			    <div align="left"><strong>5</strong>件の企業が提案</div>
+                            
+                            <!--↓pop up-->
+			    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sampleModal">
+                             提案済
+                            </button>
+                        <!-- モーダル・ダイアログ -->
+                        <div class="modal fade" id="sampleModal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    
+                               <div class="modal-header">
+															 <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                                </div>
+                                    
+                                <div class="modal-body">
+                                    <div class="box2">
+                                    <span class="box-title">User Name</span>
+                                    <table class="teble text-left"> <!-- thの中にデータいれる -->
+                                    <tr><th>住所：</th><th></th></tr>
+                                    <tr><th>趣味：</th><th></th></tr>
+                                    <tr><th>過去の訪問：</th><th></th></tr>
+                                    <tr><th>コメント：</th><th></th></tr>																<br>
+                                    </table>
+                                    </div>
+                                </div>
+                                    
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">提案</button>
+                                </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
 
 			　</from>
 
 			 </div>
 
-	</div>
-                  </div>
+                    </div>
+               </div>
 	 </div>
  <% }
 

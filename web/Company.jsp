@@ -27,7 +27,7 @@
          <tr><th>*のついた項目は入力必須</th><th></th></tr>
         </thead>
         <form method="POST" action="ProfileservletCompany">
-           <tr><th>*Email</th><th><input type="text" name="Email"></th></tr>
+           <tr><th>*Email</th><th><input type="text" name="Email"></th><tr>
            <tr ><th>*Name</th><th><input type="text" name="Name"></th></tr>
            <tr ><th>*Pass</th><th><input type="text" name="Pass"></th></tr>
            <tr ><th>*Re-Pass</th><th><input type="text" name="Pass"></th></tr>

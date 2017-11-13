@@ -56,18 +56,3 @@ CheckIn      varchar(20),
 Checkout     varchar(20),
 count        int(5)
 );
-
-create table plantem(
-UID		varchar(20),
-CID     varchar(20)
-UName	varchar(20),
-CName	varchar(20),
-Des1    varchar(20),
-Vehicle	varchar(20),
-Detail  varchar(100),
-zikan varchar(50),
-CheckIn      varchar(20),
-Checkout     varchar(20)
-);
-
-

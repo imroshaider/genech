@@ -64,7 +64,7 @@ String user = Kakunindao.kakuninupdate(kakuninBean);
             MimeMessage mimeMessage = new MimeMessage(session);
 
             InternetAddress toAddress = 
-                    new InternetAddress(to, "nishimoto");
+                    new InternetAddress(to, "");
 
             mimeMessage.setRecipient(Message.RecipientType.TO, toAddress);
 
@@ -75,7 +75,31 @@ String user = Kakunindao.kakuninupdate(kakuninBean);
 
             mimeMessage.setSubject("Welcome to EasyTreavel ", "ISO-2022-JP");
 
-            mimeMessage.setText("hello nishimoto ", "ISO-2022-JP");
+            mimeMessage.setText(name+"御中\n" +
+"この度はEasyTravelの企業登録の申請をしていただき、誠にありがとうございます。\n" +
+"\n" +
+"貴社の本登録が完了しましたので、お知らせします。\n" +
+"\n" +
+"EasyTravlをご利用いただく際、申請時に登録して頂いた" +
+"「ログインID」、「パスワード」が必要となります。\n" +
+"\n" +
+"又、ご登録いただいた情報は、\n" +
+"ログイン後、マイページより確認・変更が可能です。\n" +
+"\n" +
+"ログインID:\n" +to+
+"\nパスワード:\n" +pass+
+"\n" +
+"EasyTravel\n" +
+"URL\n" +
+"\n" +
+"今後ともEasyTravelをよろしくお願い致します。\n" +
+"\n" +
+"\n" +
+"＝＝＝＝＝＝＝＝＝＝\n" +
+"EasyTravel\n" +
+"\n" +
+"[お問い合わせ]\n" +
+"Mail: ", "ISO-2022-JP");
 
             Transport.send(mimeMessage);
   response.sendRedirect("kanri.jsp");

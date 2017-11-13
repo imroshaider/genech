@@ -49,7 +49,16 @@ comapanyDao companydao = new comapanyDao();
 //The core Logic of the Registration application is present here. We are going to insert user data in to the database.
 String user = companydao.companyeupdate(Companybean);
 
-  
+  if(user.equals("SUCCESS"))   //On success, you can display a message to user on Home page
+{
+response.sendRedirect("Company_comp.jsp");
+
+}
+else   //On Failure, display a meaningful message to the User.
+{
+
+request.getRequestDispatcher("/Company.jsp").forward(request, response);
+}
 			
 }
 }

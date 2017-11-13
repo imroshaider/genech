@@ -5,10 +5,10 @@
         <group>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/comapanyDao.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Loginservlet.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/C_mypage.jsp</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Logoutservlet.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/ProfileservletCompany.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/Profileservlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/nbproject/build-impl.xml</file>
         </group>
     </open-files>
 </project-private>

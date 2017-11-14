@@ -21,3 +21,15 @@
     margin: 0; 
     padding: 0;
 }
+
+.box3 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #f0ad4e;
+    border-radius: 8px;
+}
+.box3 p {
+    margin: 0; 
+    padding: 0;
+}

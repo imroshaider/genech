@@ -25,7 +25,11 @@
 
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/img.css" rel="stylesheet">
+        <link href="css/m_box.css" rel="stylesheet">
+        <link href="css/login.css" rel="stylesheet">
+        <link href="css/img.css" rel="stylesheet">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -75,39 +79,94 @@ fo.write(x.getBytes("image"));
 		 </div>
 	 
 	 </center></div>
+    
+    
+    <!-- リアルタイム -->
+     <div class="col-md-6">
 
-	 <div class="col-xs-6 col-md-6">
-	  <form action="" method="GET">
-	   <div class="form-group">
-	    <label class="control-label">オススメ旅行</label><br />
-	   </div>
-		 <div class="col-sm-6">
-			 <div class="panel panel-warning">
-				 <div class="panel-heading strong">日帰り食べ歩きプラン</div>
-				<div class="panel-body">評価:★★★★☆</div>
-				<ul class="list-group">
-	       		<li class="list-group-item">料金:8,000円~</li>
-				<li class="list-group-item">大阪府大阪市中央区道頓堀</li>
-				<li class="list-group-item">Booking.com</li>
-	       		<li class="list-group-item"><a href="">詳細はこちら</a></li>
-	   			</ul>
-			 </div>
-		 </div>
-		 	<div class="col-sm-6">
-			 	<div class="panel panel-warning">
-				 <div class="panel-heading strong">異人館観光<<素泊まり>></div>
-					 <div class="panel-body">評価:★★★☆☆</div>
-					 <ul class="list-group">
-					 <li class="list-group-item">料金:6,000円~</li>
-					 <li class="list-group-item">兵庫県神戸市中央区</li>
-					 <li class="list-group-item">Expedia</li>
-					 <li class="list-group-item"><a href="">詳細はこちら</a></li>
-					 </ul>
-			 </div>
-		 </div>
-	  </form>
+         <div class="col-sm-6">
+        <br>
 
-	</div>
+      <div class="panel panel-warning">
+             <div class="panel-body"><div class="media">
+
+                 <a class="media-left" href="#">
+                 </a>
+
+                 <div class="media-body">
+                <h4 class="media-heading">
+                                      <!--↓pop up-->
+          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#Modal_1">
+                             企業名
+                            </button>
+                        <!-- モーダル・ダイアログ -->
+                            <div class="modal fade" id="Modal_1" tabindex="-1">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                               <div class="modal-header">
+                               <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                                </div>
+                            <div class="modal-body">
+                              <div class="box3">
+                                <table class="teble text-left"> <!-- thの中にデータいれる -->
+                                <tr><th>企業名：</th><th></th></tr>
+                                <tr><th>コメント：</th><th></th></tr>
+                                <tr><th>評価：</th><th></th></tr>
+                                </table>
+                              </div>
+
+                            </div>
+<!--                            <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">提案</button>
+                            </div>-->
+                            </div>
+                    </div>
+                    </div></h4>
+                     行き先：<br>
+                     IN：<br>
+                     OUT：<br>
+                     料金：
+      </div>
+      </div>
+                 
+      <div class="panel-footer text-right">
+          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#Modal_2">
+                             プラン詳細
+                            </button>
+                        <!-- モーダル・ダイアログ -->
+                            <div class="modal fade" id="Modal_2" tabindex="-1">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                               <div class="modal-header">
+                               <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                                </div>
+                            <div class="modal-body">
+                              <div class="box3">
+                               <table class="teble text-left">  <!--thの中にデータいれる -->
+                                <tr><th>住所：</th><th></th></tr>
+                                <tr><th>趣味：</th><th></th></tr>
+                                <tr><th>過去の訪問：</th><th></th></tr>
+                                <tr><th>コメント：</th><th></th></tr>                                <br>
+                                </table>
+                              </div>
+
+                            </div>
+                            <div class="modal-footer">
+                              <form action="">
+                                <button type="button" class="btn btn-primary">提案</button>
+                              </from>
+                            </div>
+                            </div>
+                    </div>
+                    </div>
+
+       </div>
+
+  </div>
+                  </div>
+   </div>
+</div>
+    <!--リアルタイム部分最後-->
 
   <div class="col-xs-6 col-md-4 bg-warning">
    <form action="KibouServlet" method="POST">

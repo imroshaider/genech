@@ -132,6 +132,8 @@ ResultSet x =preparedStatement.executeQuery();
                     out.println("<p>IN:" + x.getString("CheckIn") + "</p>");
                                       out.println("<p>OUT:" + x.getString("Checkout") + "</p>");
                     %>
+                    <p>人数:</p>
+                    <p>予算:</p>
       </div>
       </div>
       <div class="panel-footer text-right">
@@ -155,7 +157,7 @@ ResultSet x =preparedStatement.executeQuery();
                                 <tr><th>住所：</th><th></th></tr>
                                 <tr><th>趣味：</th><th></th></tr>
                                 <tr><th>過去の訪問：</th><th></th></tr>
-                                <tr><th>コメント：</th><th></th></tr>                                <br>
+                                <tr><th>コメント：</th><th></th></tr>
                                 </table>
                               </div>
 

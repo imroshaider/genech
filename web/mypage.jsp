@@ -20,6 +20,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv='Content-Style-Type' content='text/javascript'>
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>マイページ</title>
 
@@ -230,8 +231,8 @@ fo.write(x.getBytes("image"));
   　</div>
 
     <div Align="right">
-			 <p id="message01" class="text-danger "></p>
-     <input type="button" value="送信" class="btn btn-default" onclick="putMessage('送信完了しました')" />
+			 <p id="message01" class="text-danger"></p>
+     <input type="button" value="送信" class="btn btn-default" onclick="putMessage('送信しました')" />
     </div>
    </form>
 

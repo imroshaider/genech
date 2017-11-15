@@ -16,7 +16,6 @@
 
 </head>
 
-</head>
 <body>
 
 	<div class="page-header">
@@ -44,11 +43,8 @@
 
 <!--サイト紹介部分-->
     <div class="col-md-7">
-  	 <div class="form-header">
-  	  <h1 class="text-center">Login</h1>
-  	 </div>
 
-     <img src="img/neko.jpg" align="left">
+     <img src="img/neko.jpg" align="left" width="600" height="400">
 
 
   	 </div>
@@ -103,6 +99,7 @@
 
 	 <div class="col-md-1">
 	 </div>
+
 
 	</div>
 

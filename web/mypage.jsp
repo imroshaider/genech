@@ -30,13 +30,14 @@
         <link href="css/img.css" rel="stylesheet">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+				<script src="js/mypage.js"></script>
 
 </head>
 <body>
 <div class="container">
 	<div class="row">
 
-	
+
 	<div class="page-header">
 
 	 </div>
@@ -49,7 +50,7 @@
 //String id= mypage.getUserid();
 
           String a = (String)session.getAttribute("userid");
-       
+
     Connection con = DBConnection.createConnection();
     PreparedStatement preparedStatement = null;
       try{
@@ -61,7 +62,7 @@ ResultSet x =preparedStatement.executeQuery();
      String nishi=x.getString("name");
 img=x.getBlob("image");
 imgData = img.getBytes(1,(int)img.length());
-FileOutputStream fo = new FileOutputStream("C:\\apache-tomcat-8.5.16\\webapps\\pbl3\\web\\Image\\himu11.jpg"); 
+FileOutputStream fo = new FileOutputStream("C:\\apache-tomcat-8.5.16\\webapps\\pbl3\\web\\Image\\himu11.jpg");
 fo.write(x.getBytes("image"));
 
 
@@ -77,10 +78,10 @@ fo.write(x.getBytes("image"));
 	 <input type="submit" value="Logout" class="btn btn-default" />
 	 </form>
 		 </div>
-	 
+
 	 </center></div>
-    
-    
+
+
     <!-- リアルタイム -->
      <div class="col-md-6">
 
@@ -128,7 +129,7 @@ fo.write(x.getBytes("image"));
                      料金：
       </div>
       </div>
-                 
+
       <div class="panel-footer text-right">
           <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#Modal_2">
                              プラン詳細
@@ -168,9 +169,9 @@ fo.write(x.getBytes("image"));
 </div>
     <!--リアルタイム部分最後-->
 
-  <div class="col-xs-6 col-md-4 bg-warning">
-   <form action="KibouServlet" method="POST">
-<div class="form-group">
+<div class="col-xs-6 col-md-4 bg-warning">
+   <form action="KibouServlet" method="POST" onsubmit="return false">
+	 <div class="form-group">
     <label class="control-label">目的地①：</label>
     <select class="form-control" style="width:120px;" name="Des1">
     <option value="area_null">希望なし</option>
@@ -223,11 +224,12 @@ fo.write(x.getBytes("image"));
      <p>
      チェックアウト：<input type="date" class="form-control" name="Chekout"></p>
   　</div>
-       
+
     <div Align="right">
-     <input type="submit" value="送信" class="btn btn-default" />
+     <input type="button" value="送信" class="btn btn-default" onclick="putMessage('送信しました')" />
     </div>
    </form>
+	 <p id="message01" ></p>
  </div>
 
  </div>
@@ -241,6 +243,6 @@ fo.write(x.getBytes("image"));
 {
 e.printStackTrace();
 }
-        %>	
+        %>
 </body>
 </html>

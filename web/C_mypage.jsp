@@ -110,7 +110,7 @@ ResultSet x =preparedStatement.executeQuery();
                             <div class="modal-body">
                               <div class="box2">
                               <span class="box-title">User Name</span>
-                                <table class="teble text-left"> <!-- thの中にデータいれる -->
+                                <table class="table text-left"> <!-- thの中にデータいれる -->
                                 <tr><th>住所：</th><th></th></tr>
                                 <tr><th>趣味：</th><th></th></tr>
                                 <tr><th>過去の訪問：</th><th></th></tr>
@@ -153,7 +153,7 @@ ResultSet x =preparedStatement.executeQuery();
                             <div class="modal-body">
                               <div class="box2">
                               <span class="box-title">User Name</span>
-                                <table class="teble text-left"> <!-- thの中にデータいれる -->
+                                <table class="table text-left"> <!-- thの中にデータいれる -->
                                 <tr><th>住所：</th><th></th></tr>
                                 <tr><th>趣味：</th><th></th></tr>
                                 <tr><th>過去の訪問：</th><th></th></tr>
@@ -226,7 +226,7 @@ ResultSet x =preparedStatement.executeQuery();
                             <div class="modal-body">
                               <div class="box2">
                               <span class="box-title">User Name</span>
-                                <table class="teble text-left"> <!-- thの中にデータいれる -->
+                                <table class="table text-left"> <!-- thの中にデータいれる -->
                                 <tr><th>住所：</th><th></th></tr>
                                 <tr><th>趣味：</th><th></th></tr>
                                 <tr><th>過去の訪問：</th><th></th></tr>
@@ -267,12 +267,13 @@ ResultSet x =preparedStatement.executeQuery();
                             <div class="modal-body">
                               <div class="box2">
                               <span class="box-title">User Name</span>
-                                <table class="teble text-left"> <!-- thの中にデータいれる -->
-                                <tr><th>住所：</th><th></th></tr>
-                                <tr><th>趣味：</th><th></th></tr>
-                                <tr><th>過去の訪問：</th><th></th></tr>
-                                <tr><th>コメント：</th><th></th></tr>                                <br>
-                                </table>
+                              <table class="table text-left"> <!-- thの中にデータいれる -->
+                              <tr><th>住所：</th><th></th></tr>
+                              <tr><th>趣味：</th><th></th></tr>
+                              <tr><th>過去の訪問：</th><th></th></tr>
+                              <tr><th>コメント：</th><th></th></tr>
+                              </table>
+                            </div>
                               </div>
 
                             </div>

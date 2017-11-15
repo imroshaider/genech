@@ -105,12 +105,13 @@ fo.write(x.getBytes("image"));
                             <div class="modal-dialog">
                             <div class="modal-content">
                                <div class="modal-header">
+															 企業名
                                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
                                 </div>
                             <div class="modal-body">
                               <div class="box3">
-                                <table class="teble text-left"> <!-- thの中にデータいれる -->
-                                <tr><th>企業名：</th><th></th></tr>
+                                <table class="table text-left"> <!-- thの中にデータいれる -->
+                                <tr><th>HP：</th><th></th></tr>
                                 <tr><th>コメント：</th><th></th></tr>
                                 <tr><th>評価：</th><th></th></tr>
                                 </table>
@@ -139,15 +140,16 @@ fo.write(x.getBytes("image"));
                             <div class="modal-dialog">
                             <div class="modal-content">
                                <div class="modal-header">
+															 プラン詳細
                                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
                                 </div>
                             <div class="modal-body">
                               <div class="box3">
-                               <table class="teble text-left">  <!--thの中にデータいれる -->
+                               <table class="table text-left">  <!--thの中にデータいれる -->
                                 <tr><th>住所：</th><th></th></tr>
                                 <tr><th>趣味：</th><th></th></tr>
                                 <tr><th>過去の訪問：</th><th></th></tr>
-                                <tr><th>コメント：</th><th></th></tr>                                <br>
+                                <tr><th>コメント：</th><th></th></tr>
                                 </table>
                               </div>
 

@@ -230,10 +230,11 @@ fo.write(x.getBytes("image"));
   　</div>
 
     <div Align="right">
-     <input type="button" value="送信" class="btn btn-default" onclick="putMessage('送信しました')" />
+			 <p id="message01" class="text-danger "></p>
+     <input type="button" value="送信" class="btn btn-default" onclick="putMessage('送信完了しました')" />
     </div>
    </form>
-	 <p id="message01" ></p>
+
  </div>
 
  </div>

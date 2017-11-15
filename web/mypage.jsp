@@ -96,7 +96,7 @@ fo.write(x.getBytes("image"));
                  </a>
 
                  <div class="media-body">
-                <h4 class="media-heading">
+                     <h4 class="media-heading"></h4>
                                       <!--↓pop up-->
           <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#Modal_1">
                              企業名
@@ -105,17 +105,19 @@ fo.write(x.getBytes("image"));
                             <div class="modal fade" id="Modal_1" tabindex="-1">
                             <div class="modal-dialog">
                             <div class="modal-content">
-                               <div class="modal-header">
-															 企業名
+                               <div class="modal-header text-left">
+			　　　　企業名
                                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
                                 </div>
                             <div class="modal-body">
                               <div class="box3">
+                                <h4>
                                 <table class="table text-left"> <!-- thの中にデータいれる -->
                                 <tr><th>HP：</th><th></th></tr>
                                 <tr><th>コメント：</th><th></th></tr>
                                 <tr><th>評価：</th><th></th></tr>
                                 </table>
+                                </h4>
                               </div>
 
                             </div>
@@ -124,11 +126,12 @@ fo.write(x.getBytes("image"));
                             </div>-->
                             </div>
                     </div>
-                    </div></h4>
-                     行き先：<br>
-                     IN：<br>
-                     OUT：<br>
-                     料金：
+                        </div>
+                        <br>
+                        行き先:<br>
+                        IN:<br>
+                        OUT:<br>
+                        料金:<br>
       </div>
       </div>
 
@@ -140,26 +143,28 @@ fo.write(x.getBytes("image"));
                             <div class="modal fade" id="Modal_2" tabindex="-1">
                             <div class="modal-dialog">
                             <div class="modal-content">
-                               <div class="modal-header">
-															 プラン詳細
+                               <div class="modal-header text-left">
+				プラン詳細
                                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
                                 </div>
                             <div class="modal-body">
                               <div class="box3">
+                              <h4>
                                <table class="table text-left">  <!--thの中にデータいれる -->
                                 <tr><th>行き先：</th><th></th></tr>
                                 <tr><th>日時：</th><th></th></tr>
                                 <tr><th>ホテル：</th><th></th></tr>
-																<tr><th>チェックイン：</th><th></th></tr>
-																<tr><th>チェックアウト：</th><th></th></tr>
+				<tr><th>チェックイン：</th><th></th></tr>
+                                <tr><th>チェックアウト：</th><th></th></tr>
                                 <tr><th>コメント：</th><th></th></tr>
                                 </table>
+                               </h4>
                               </div>
 
                             </div>
                             <div class="modal-footer">
                               <form action="">
-                                <button type="button" class="btn btn-primary">提案</button>
+                                <button type="button" class="btn btn-primary">確認</button>
                               </from>
                             </div>
                             </div>

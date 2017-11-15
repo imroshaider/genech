@@ -146,9 +146,11 @@ fo.write(x.getBytes("image"));
                             <div class="modal-body">
                               <div class="box3">
                                <table class="table text-left">  <!--thの中にデータいれる -->
-                                <tr><th>住所：</th><th></th></tr>
-                                <tr><th>趣味：</th><th></th></tr>
-                                <tr><th>過去の訪問：</th><th></th></tr>
+                                <tr><th>行き先：</th><th></th></tr>
+                                <tr><th>日時：</th><th></th></tr>
+                                <tr><th>ホテル：</th><th></th></tr>
+																<tr><th>チェックイン：</th><th></th></tr>
+																<tr><th>チェックアウト：</th><th></th></tr>
                                 <tr><th>コメント：</th><th></th></tr>
                                 </table>
                               </div>

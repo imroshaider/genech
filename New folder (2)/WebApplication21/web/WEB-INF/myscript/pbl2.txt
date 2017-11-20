@@ -1,0 +1,35 @@
+# データベースpbl2の作成
+set names utf8;
+drop database if exists pbl2;
+create database pbl2;
+
+# ユーザー pbl2に、パスワード pbl2 を設定し、データベース pbl2 に対するすべての権限を付与
+grant all privileges on pbl2.* to pbl2@localhost identified by 'pbl2';
+
+# データベース pbl2 を使用する
+use pbl2;
+
+# テーブル user の作成
+create table user(
+	ID	varchar(14) primary key,
+	PASS	varchar(16) not null,
+	Mail 	varchar(30) not null
+	);
+
+# テーブル user へテストデータを入力
+insert into user(ID,PASS,Mail)
+values('0K01023','0K01023','kd0000023@st.kobedenshi.ac.jp'),('0K01024','0K01024','kd0000024@st.kobedenshi.ac.jp');
+
+# テーブル userprof の作成
+create table userprof(
+ID		varchar(14) primary key,
+name            varchar(8),
+age		varchar(14),
+sex		varchar(5),
+address		varchar(60) ,
+keep		varchar(120),
+image	mediumblob,
+post    varchar(20)
+
+);
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>見積りフォーム</title>
+<link rel="Stylesheet" href="tour.css">
+</head>
+<body>
+<div id="main">
+<h4>ハワ旅行見積りフォーム</h4>
+<form method="PSOT" action="tour.jsp">
+<table id ="mainTable">
+<tr><td class="titleColor">基本料金</td></tr>
+<tr><td>
+	<input type="radio" name="course" value="1" checked>エコメミークラス:150,000円<br>
+	<input type="radio" name="course" value="2" >ビジネスクラス:200,000円<br>
+	<input type="radio" name="course" value="3" >LCC(ローコストキャリア)クラス:100,000円
+</td></tr>	
+<tr><td class="titleColor">オプションナルシアー(複数選択可)</td></tr>
+<tr><td>
+<input type="checkbox" name="option" value="1">ポリネシア文化センター:5000円<br>
+<input type="checkbox" name="option" value="2">サンセットクルーズ:10,000円<br>
+<input type="checkbox" name="option" value="3">キラウエア火山観光:40,000円<br>
+</td></tr>
+<tr><td class="centerPos">
+	<input type="submit" value="見積り結果表示">&nbsp;&nbsp;<input type="submit" value="リセット">
+</td></tr>
+</table>
+</form>
+<br>
+<hr>
+01組　040番　イムロス
+</div>
+</body>
+</html>

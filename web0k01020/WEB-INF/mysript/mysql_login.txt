@@ -1,0 +1,19 @@
+# 文字コードのセット
+set names utf8;
+
+# データベース login の作成
+
+drop database if exists login;
+create database login;
+
+# ユーザー「tom」にパスワード「cat8」を設定し、データベース「login」に対する全ての権限を付与
+grant all privileges on login.* to tom@localhost identified by 'cat8';
+
+# データベース login を使用
+use login;
+
+# テーブル password の作成
+# mysqlでは、char、varcharカラムに対して検索条件（where）やソート（order by）時に
+# 大文字小文字を区別しない
+# 区別させる場合にはテーブル作成時に binary属性を設定する必要がある。
+create table password(ident varchar(8) binary primary key,pass varchar(12) not null,name varchar(50) not null);

@@ -1,0 +1,26 @@
+/* */
+body{
+	text-align: center;
+}
+
+/*  */
+#main{
+	margin: 0 auto;
+}
+
+h1{
+	text-align: right;
+	background-color: #7799dd;
+	color: #ffffff;
+}
+
+h3{
+	background-color: #7799dd;
+	color: #ffffff;
+}
+
+#content{
+	text-align: center;
+	color: #7799dd;
+	font-size: 36px;
+}

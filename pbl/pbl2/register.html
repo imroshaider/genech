@@ -1,0 +1,64 @@
++<!DOCTYPE html>
++<html lang="ja">
++
++<head>
++ <meta charset="utf-8">
++ <meta http-equiv="X-UA-Compatible" content="IE=edge">
++ <meta name="viewport" content="width=device-width, initial-scale=1">
++ <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
++ <title>会員登録</title>
++
++ <!-- Bootstrap -->
++ <link href="css/bootstrap.min.css" rel="stylesheet">
++ <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
++ <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
++ <!--[if lt IE 9]>
++      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
++      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
++    <![endif]-->
++</head>
++<body>
++ <div class="container">
++ <div class="row main">
++
++  <div class="form-header">
++   <h1 class="text-center">会員登録</h1>
++  </div>
++  <div class="form">
++  <form  method="POST" action="register1.jsp">
++
++    <div class="form-group">
++      <p><label for="id">User ID</label></p>
++      <textarea class="form-control" id="ID" style="width:200px;" placeholder="name" rows="1" maxlength="14"></textarea>      <small class="form-text text-muted">14文字以内の英数字</small>
++    </div>
++
++    <div class="form-group">
++      <p><label for="password">Password</label></p>
++      <input type="password" class="form-control" style="width:200px;" id="password" placeholder="Password" maxlength="16">
++      <small class="form-text text-muted">16文字以内の英数字</small>
++    </div>
++
++    <div class="form-group">
++      <p><label for="email">Email</label><br></p>
++      <input type="email" class="form-control" style="width:300px;" id="email" placeholder="メールアドレス" maxlength="30">
++      <small class="form-text text-muted">有効なメールアドレスを入力</small>
++    </div>
++
++   <div class="form-check">
++     <label class="form-check-label">
++     <input type="checkbox" class="form-check-input">
++    同意する
++   　　</label>
++   　</div>
++   <div Align="right">
++   　<button type="submit" value="sign_up" id="sign_up" name="sign_up" class="btn btn-info">登録する</button>
++   </div>
++   </form>
++
++
++</div>
++</div>
++</div>
++
++</body>
++</html>

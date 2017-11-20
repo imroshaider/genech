@@ -1,0 +1,47 @@
+set names utf8;
+
+drop database if exists itee;
+create database itee;
+
+grant all privileges on itee.* to ipa@localhost identified by 'jitec';
+
+
+use itee;
+
+create table examination(
+	ident int auto_increment primary key,
+	classification varchar(100),
+	mnemonic	char(2),
+	english_name	varchar(100),
+	rank int,
+	target	varchar(200)
+	);
+# テーブル examination にデータを挿入
+	insert into examination(classification, mnemonic, english_name, rank, target)
+  values('ITパスポート試験', 'IP', 'Information Technology Passport Examination', 1,
+         '職業人が共通に備えておくべき情報技術に関する基礎的な知識をもち，情報技術に携わる業務に就くか，担当業務に対して情報技術を活用していこうとする者');
+insert into examination(classification, mnemonic, english_name, rank, target)
+  values('基本情報技術者試験', 'FE', 'Fundamental Information Technology Engineer Examination', 2,
+         '高度IT 人材となるために必要な基本的知識・技能をもち，実践的な活用能力を身に付けた者');
+insert into examination(classification, mnemonic, english_name, rank, target)
+  values('応用情報技術者試験', 'AP', 'Applied Information Technology Engineer Examination', 3,
+         '高度IT 人材となるために必要な応用的知識・技能をもち，高度IT 人材としての方向性を確立した者');
+insert into examination(classification, mnemonic, english_name, rank, target)
+  values('プロジェクトマネージャ試験', 'PM', 'Project Manager Examination', 4,
+         '高度IT 人材として確立した専門分野をもち，システム開発プロジェクトの責任者として，プロジェクト計画を立案し，必要となる要員や資源を確保し，計画した予算，納期，品質の達成について責任をもってプロジェクトを管理・運営する者');
+insert into examination(classification, mnemonic, english_name, rank, target)
+  values('ネットワークスペシャリスト試験', 'NW', 'Network Specialist Examination', 4,
+         '高度IT 人材として確立した専門分野をもち，ネットワークに関係する固有技術を活用し，最適な情報システム基盤の企画・要件定義・開発・運用・保守において中心的な役割を果たすとともに，固有技術の専門家として，情報システムの企画・要件定義・開発・運用・保守への技術支援を行う者');
+insert into examination(classification, mnemonic, english_name, rank, target)
+  values('データベーススペシャリスト試験', 'DB', 'Database Specialist Examination', 4,
+         '高度IT 人材として確立した専門分野をもち，データベースに関係する固有技術を活用し，最適な情報システム基盤の企画・要件定義・開発・運用・保守において中心的な役割を果たすとともに，固有技術の専門家として，情報システムの企画・要件定義・開発・運用・保守への技術支援を行う者');
+
+
+# テーブル rank の作成
+create table rank(number int primary key,rank char(4),level varchar(20));
+
+# テーブル rank にデータを挿入
+insert into rank(number, rank, level) values(1, "レベル１", "職業人に共通に求められる基礎知識");
+insert into rank(number, rank, level) values(2, "レベル２", "基本的知識・技術");
+insert into rank(number, rank, level) values(3, "レベル３", "応用的知識・技術");
+insert into rank(number, rank, level) values(4, "レベル４", "高度な知識・技術");

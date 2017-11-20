@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body{
+	text-align: center;
+}
+#main{
+	margin: 0 auto;
+}
+#mainTable{
+	border:1px solid;
+	margin: 0 auto;
+}
+td{
+	border:1px solid;
+	text-align: left; 
+}
+.titleColor{
+	background-color: #a0d8ef;
+}
+.centerPos{
+	text-align: center;
+}
+.rightPos{
+	text-align: right;
+}

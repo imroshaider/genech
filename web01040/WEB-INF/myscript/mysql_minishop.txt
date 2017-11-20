@@ -1,0 +1,54 @@
+﻿# データベースminishopの作成
+set names utf8;
+drop database if exists minishop;
+create database minishop;
+# ユーザーminiに、パスワードshopを設定し、データベースminishopに対するすべての権限を付与
+grant all privileges on minishop.* to mini@localhost identified by 'shop';
+
+# データベースminishopを使用する
+use minishop;
+
+# テーブルitemsの作成
+create table items(
+	ident	int auto_increment primary key,
+	name	varchar(50) not null,
+	maker	varchar(50) not null,
+	price	int,
+	image	varchar(20),
+    genre   varchar(10)
+);
+
+# テーブルitemsへデータを入力
+insert into items(name, maker, price, image, genre)
+	values('MacBook Pro', 'Apple', 222200, 'pc001.jpg', 'pc');
+insert into items(name, maker, price, image, genre)
+	values('NEC LAVIE', 'NEC', 61980, 'pc002.jpg', 'pc');
+insert into items(name, maker, price, image, genre)
+	values('Surface Pro 4', 'マイクロソフト', 167980, 'pc003.jpg', 'pc');
+insert into items(name, maker, price, image, genre)
+	values('MB-B501E', 'マウスコンピューター', 39063, 'pc004.jpg', 'pc');
+insert into items(name, maker, price, image, genre)
+	values('iPad Air 2', 'Apple', 56000, 'pc005.jpg', 'pc');
+
+insert into items(name, maker, price, image, genre)
+	values('独習Javaサーバサイド編', '山田　祥寛', 3888, 'book001.jpg', 'book');
+insert into items(name, maker, price, image, genre)
+	values('スラスラわかるJavaScript', '生形　可奈子', 2484, 'book002.jpg', 'book');
+insert into items(name, maker, price, image, genre)
+	values('SCRUM BOOT CAMP THE BOOK', '西村　直人ほか', 2592, 'book003.jpg', 'book');
+insert into items(name, maker, price, image, genre)
+	values('かんたんUML入門 (プログラミングの教科書)', '大西　洋平ほか', 3218, 'book004.jpg', 'book');
+insert into items(name, maker, price, image, genre)
+	values('Webデザイナーのための jQuery入門', '高津戸 壮', 3110, 'book005.jpg', 'book');
+
+
+insert into items(name, maker, price, image, genre)
+	values('1989', 'テイラー・スウィフト', 2012, 'music001.jpg', 'music');
+insert into items(name, maker, price, image, genre)
+	values('The Getaway', 'レッド・ホット・チリ・ペッパーズ', 1574, 'music002.jpg', 'music');
+insert into items(name, maker, price, image, genre)
+	values('25(UK盤)', 'Adele', 1205, 'music003.jpg', 'music');
+insert into items(name, maker, price, image, genre)
+	values('ヨシ子さん', '桑田佳祐', 1700, 'music004.jpg', 'music');
+insert into items(name, maker, price, image, genre)
+	values('DREAMS COME TRUE THE ウラBEST! 私だけのドリカム', 'DREAMS COME TRUE', 3672, 'music005.jpg', 'music');

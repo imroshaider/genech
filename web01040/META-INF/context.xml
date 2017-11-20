@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context displayName="DataSource for web01040"
+	docBase="web01040" path="/web01040" reloadable="true">
+
+	 <Resource name="jdbc/jsp" auth="Container"
+      type="javax.sql.DataSource"
+		username="kobe" password="denshi"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/jsp?useUnicode=true&amp;characterEncoding=UTF-8"
+		    maxActive="10" maxIdle="4" maxWait="5000"
+      validationQuery="select count(*) from person"
+     />
+<Resource name="jdbc/login" auth="Container"
+      type="javax.sql.DataSource"
+		username="tom" password="cat8"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/login?useUnicode=true&amp;characterEncoding=UTF-8"
+		    maxActive="10" maxIdle="4" maxWait="5000"
+      validationQuery="select count(*) from password"
+     />
+     <Resource name="jdbc/itee" auth="Container"
+      type="javax.sql.DataSource"
+		username="ipa" password="jitec"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/itee?useUnicode=true&amp;characterEncoding=UTF-8"
+		    maxActive="10" maxIdle="4" maxWait="5000"
+      validationQuery="select count(*) from rank"
+     />
+     <Resource name="jdbc/minishop" auth="Container"
+      type="javax.sql.DataSource"
+		username="mini" password="shop"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/minishop?useUnicode=true&amp;characterEncoding=UTF-8"
+		    maxActive="10" maxIdle="4" maxWait="5000"
+      validationQuery="select count(*) from items"
+     />
+</Context>

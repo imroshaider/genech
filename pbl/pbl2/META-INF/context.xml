@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context displayName="DataSource for pbl2"
+	docBase="pbl" path="pbl/" reloadable="true">
+
+	 <Resource name="plb2" auth="Container"
+      type="javax.sql.DataSource"
+		username="pbl2" password="pbl2"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/pbl2?useUnicode=true&amp;characterEncoding=UTF-8"
+		    maxActive="10" maxIdle="4" maxWait="5000"
+      validationQuery="select count(*) from user"
+     />
+
+</Context>

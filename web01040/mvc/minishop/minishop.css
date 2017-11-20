@@ -1,0 +1,19 @@
+
+table, th , td{
+	
+	border: 1px solid;
+}
+th, td{
+	padding: 3px 10px 3px 10px;
+}
+.td_right{
+	text-align: right;
+
+}
+.td_center{
+	text-align:center;
+}
+img.detail_img{
+	width: 60%;
+	height:60%;
+}

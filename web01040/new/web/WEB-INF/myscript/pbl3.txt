@@ -1,0 +1,18 @@
+create table temppalan(
+ID  int(10)  auto_increment,
+Cid    varchar(20),
+Uid		varchar(20),
+CName	varchar(20),
+UName	varchar(20),
+Des1    varchar(20),
+Cost    varchar(10),
+Hotel	varchar(20),
+zikan varchar(50),
+CheckIn      varchar(20),
+Checkout     varchar(20),
+people        int(5),
+count           int(5),
+detal          varchar(100),
+vehicle       varchar(10),
+primary key('Uid')
+);

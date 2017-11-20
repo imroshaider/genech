@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MVC BMI FORM</title>
+</head>
+<body>
+<h3>BMIによる肥満度調査</h3>
+名前.身長.体量を入力し、痩身ボタン押してください。<br>
+なお、身長は「センチメートル」、体量は「キログラム」単位とします。<br>
+<form method="POST" action="bmicontroller">
+名　前 : <input type="text" name="name" /><br>
+身　長 : <input type="text" name="height" />cm(例：175cmの方は、175と入力してきださい。)<br>
+体　量 : <input type="text" name="weight" />kg(例：65kgの方は、65と入力してきださい。)<br>
+<input type="hidden" name="process" value="calc" />
+<input type="submit" value="計算する" />
+</form>
+<hr>
+01組　040番　イムロス
+</body>
+</html>

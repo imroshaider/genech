@@ -1409,7 +1409,7 @@ a.bg-danger:focus {
 }
 .page-header {
   padding-bottom: 9px;
-  margin: 40px 0 20px;
+  margin: 10px 0 10px;
   border-bottom: 1px solid #eee;
 }
 ul,
@@ -4593,7 +4593,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #ffffcc;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {

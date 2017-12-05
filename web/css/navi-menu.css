@@ -1,3 +1,26 @@
-.navi-menu{
-	
-}
+.imagePreview {
+        width: 100%;
+        height: 300px;
+        background-position: center center;
+        background-size: cover;
+
+        -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+        display: inline-block;
+        margin-left: 240px;
+    }
+    .center{
+        margin-left: 800px;
+    }
+    .group{
+        width: 720px;
+        height: 80px;
+        background-color: blanchedalmond;
+       margin-left: 240px;
+       margin-top: 5px;
+       
+    }
+    .group-center{
+    padding-top: 25px;
+    padding-left: 250px;
+    }
+

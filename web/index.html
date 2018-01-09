@@ -80,21 +80,40 @@ and open the template in the editor.
             </div>
         </nav>
      </div>
+       <form action="test" method="post" enctype="multipart/form-data" name="uploadImage" id="uploadImage"> 
+            <div class="col-md-7 text-left">
+           
+                
+                    <div class="imagePreview"></div>
+                    <div class="center">
+                        <label class="input-group-btn">
+                            <span class="btn btn-primary">
+                                画像取り込む <input type="file" style="display:none" name="file" id="file" class="uploadFile">
+                                  
+                                 
+                            </span>
+                           
+                        </label>
+                       
+                    </div>
+      </div>
       <div class="col-md-7 text-left">
        <nav class="group-1">
   <div class="container-fluid">
-    
+  
     <ul class="nav navbar-nav">
-        <li class="active"><a href="#" class="btn btn-primary">画像取り込む</a></li>
+        <li class="active"></li>
       <li class="dropdown"><a class="btn btn-primary" data-toggle="dropdown" href="#">変換 <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">履歴書用</a></li>
           <li><a href="#">パスポート用</a></li>
-          <li><a href="#">PDFに変換</a></li>
-          <li><a href="#">PINに変換</a></li>
+     
+          <li><input type="submit" name="Submit" value="PDFに変換"></li>
           <li><a href="#">JPEGに変換</a></li>
         </ul>
       </li>
+ 
+
       <li><a class="btn btn-primary" href="#">画像情報</a></li>
      
     </ul>
@@ -103,22 +122,9 @@ and open the template in the editor.
 	
     </div>  
      
-             <div class="col-md-7 text-left">
-           
-                <form action="" method="post" enctype="multipart/form-data">
-                    <div class="imagePreview"></div>
-                    <div class="center">
-                        <label class="input-group-btn">
-                            <span class="btn btn-primary">
-                                画像取り込む <input type="file" style="display:none" class="uploadFile">
-                                 
-                            </span>
-                           
-                        </label>
-                       
-                    </div>
-                </form>
-      </div>
+            
+                      </form>
+
           <div class="col-md-7 text-left">
              
                   <div class="group">
@@ -126,8 +132,10 @@ and open the template in the editor.
                     
                       <form action="" method="">
                           <div class="group-center">
-                          <input class="btn btn-primary" type="submit" value="DownLoad">
-                           <input class="btn btn-primary" type="reset" value="Cancel">
+                          
+                          <a class="btn btn-primary downloadupaddinvoice"  title="Download uploaded invoice" download>Download</a>
+                         
+                          <input class="btn btn-primary" type="reset" value="Cancel">
                           </div>
                       </form>
                     
@@ -153,10 +161,29 @@ and open the template in the editor.
                 reader.readAsDataURL(files[0]); // read the local file
                 reader.onloadend = function(){ // set image data as background of div
                     input.parent().parent().parent().prev('.imagePreview').css("background-image", "url("+this.result+")");
-                }
+                };
             }
         });
-        </script>
         
+       
+        </script>
+        <script>
+         $(".downloadupaddinvoice").click(function(){
+        var filename = $('file').val();
+
+        if (filename === "" || filename === null) {
+            alert('Error');
+        }else {
+            var file = document.getElementById('file').files[0];      
+            var filename = document.getElementById('file').files[0].name;      
+            var blob = new Blob([file]);
+            var url  = URL.createObjectURL(blob);
+
+            $(this).attr({ 'download': filename, 'href': url});  
+            filename = "";
+        }
+
+    }) ;
+    </script>
     </body>
 </html>

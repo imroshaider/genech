@@ -38,6 +38,8 @@ public String teianupdate(TeianBean teianBean){
         String uuid=teianBean.getUuid();
         Integer count=0;
         String zikan;
+        String sentaku="NO";
+         String feedback="NO";
         zikan=sdf.format(cal.getTime())+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.DATE)+"-"+cal.get(Calendar.HOUR_OF_DAY)+"-"+cal.get(Calendar.MINUTE);
         
         Integer  Kcount= 1;
@@ -69,7 +71,7 @@ public String teianupdate(TeianBean teianBean){
         Logger.getLogger(TeianDao.class.getName()).log(Level.SEVERE, null, ex);
     }
      try {        
-            String query1 = "insert into temppalan(Cid,Uid,CName,UName,Des1,Cost,Hotel,zikan,CheckIn,Checkout,people,count,detal,vehicle) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //Insert user details into the table 'USERS'
+            String query1 = "insert into temppalan(Cid,Uid,CName,UName,Des1,Cost,Hotel,zikan,CheckIn,Checkout,people,count,detal,vehicle,sentaku,feedback) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //Insert user details into the table 'USERS'
             preparedStatement = con.prepareStatement(query1);
             
 //Making use of prepared statements here to insert bunch of data
@@ -88,7 +90,8 @@ preparedStatement.setString(11, People);
 preparedStatement.setInt(12, count);
 preparedStatement.setString(13, Detail);
 preparedStatement.setString(14, Vehocle);
-
+preparedStatement.setString(15, sentaku);
+preparedStatement.setString(16, feedback);
 int i=  preparedStatement.executeUpdate();
 
 

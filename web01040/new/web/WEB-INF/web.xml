@@ -8,6 +8,22 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     <servlet>
+    <servlet-name>FeedbackServlet</servlet-name>
+<servlet-class>mvc.feedback.FeedbackServlet</servlet-class>
+</servlet>
+    <servlet>
+    <servlet-name>ForgetServlet</servlet-name>
+<servlet-class>mvc.forget.ForgetServlet</servlet-class>
+</servlet>
+    <servlet>
+    <servlet-name>PaymentServlet</servlet-name>
+<servlet-class>mvc.payment.PaymentServlet</servlet-class>
+</servlet>
+    <servlet>
+    <servlet-name>SentakuServlet</servlet-name>
+<servlet-class>mvc.sentaku.SentakuServlet</servlet-class>
+</servlet>
+    <servlet>
     <servlet-name>RegisterServlet</servlet-name>
 <servlet-class>mvc.register.RegisterServlet</servlet-class>
 </servlet>
@@ -41,6 +57,24 @@
 <servlet-class>mvc.teian.TeianServlet</servlet-class>
 </servlet>
 
+
+<servlet-mapping>
+<servlet-name>FeedbackServlet</servlet-name>
+<url-pattern>/FeedbackServlet</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>ForgetServlet</servlet-name>
+<url-pattern>/ForgetServlet</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+<servlet-name>PaymentServlet</servlet-name>
+<url-pattern>/PaymentServlet</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>SentakuServlet</servlet-name>
+<url-pattern>/SentakuServlet</url-pattern>
+</servlet-mapping>
 <servlet-mapping>
 <servlet-name>RegisterServlet</servlet-name>
 <url-pattern>/RegisterServlet</url-pattern>
@@ -74,6 +108,8 @@
 <servlet-name>TeianServlet</servlet-name>
 <url-pattern>/TeianServlet</url-pattern>
 </servlet-mapping>
+
+
 
     <servlet>
         <servlet-name>dispatcher</servlet-name>

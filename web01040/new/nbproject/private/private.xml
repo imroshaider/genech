@@ -3,44 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kibou/KibouBean.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/LoginBean.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/MypageBean.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/mypage1.jsp</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/nbproject/build-impl.xml</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/WEB-INF/dispatcher-servlet.xml</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/kanri.jsp</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kakunin/Kakuninservlet.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/hello.jsp</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/Company.jsp</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kakunin/KakuninDao.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/mypageDao.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kibou/KibouDao.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/teian/TeianServlet.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/temp.jsp</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/New.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/register/RegisterDao.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/profile.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/index.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/feedback/FeedbackServlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/sentaku/SentakuDao.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/css/login.css</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/WEB-INF/web.xml</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/mypage.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/WEB-INF/myscript/pbl2.txt</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/Profileservlet.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/timepanel2.jsp</file>
-=======
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/comapanyDao.java</file>
->>>>>>> 844937ffb9e36e0ac3dc6e21d60a2443025c80e8
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Loginservlet.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/C_mypage.jsp</file>
-<<<<<<< HEAD
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/C_mypage1.jsp</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/teian/TeianDao.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/teian/TeianBean.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/kibou/KibouServlet.java</file>
-=======
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/login/Logoutservlet.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/ProfileservletCompany.java</file>
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/Profileservlet.java</file>
->>>>>>> 844937ffb9e36e0ac3dc6e21d60a2443025c80e8
-            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/nbproject/build-impl.xml~</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/forget/ForgetServlet.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/MypageBean.java</file>
             <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/nbproject/build-impl.xml</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/feedback/FeedbackBean.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/mypageSelect.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/feedback.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/forget.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/Companypage/ProfileservletCompany.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/feedback/FeedbackDao.java</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/web/sentakuinfo.jsp</file>
+            <file>file:/C:/apache-tomcat-8.5.16/webapps/pbl3/src/java/mvc/mypage/mypageDao.java</file>
         </group>
     </open-files>
 </project-private>

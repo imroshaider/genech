@@ -1,4 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" %>
+<%@ page import="java.sql.SQLException"%>
+<%@ page import="java.sql.PreparedStatement"%>
+<%@ page import="java.sql.Connection"%>
+<%@ page import="mvc.Database.DBConnection"%>
+<%@ page import="mvc.New"%>
+<%@ page import="mvc.login.Loginservlet"%>
+<%@ page import="java.sql.ResultSet"%>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -41,19 +49,35 @@
 </div>
 </div>
 
+ <%
+    String UserID = (String)session.getAttribute("userid");
+    String Hope = "";
+    
+    Connection con = DBConnection.createConnection();
+    PreparedStatement preparedStatement = null;
+try{
+         String query = "select * from userprof where ID = '"+UserID+"'";
+         preparedStatement = con.prepareStatement(query);
+         ResultSet x =preparedStatement.executeQuery();
 
-  <div class="col-md-4">
+ while(x.next()){
+                  Hope=x.getString("name");
+                           
+                         
+%>
+            
+            
+  <div class="col-md-4 text-warning">
    <div class="form-header">
    </div>
    <div class="form">
    
       <div class="form-group">
         <p><label for="id">User Name</label></p>
-        <input type="text" class="form-control" name="username" style="width:200px;" rows="1" maxlength="14">
-				<small class="form-text text-muted">8文字以内のニックネーム</small>
+        <input type="text" class="form-control" name="username" value="<%= x.getString("name") %>" style="width:200px;" rows="1" maxlength="14">
+	<small class="form-text text-muted">8文字以内</small>
       </div>
 
-      <p>
         <div class="form-group">
           <label for="sex">Sex</label>
             <div class="radio-inline">
@@ -61,36 +85,41 @@
               <label for="man">男性</label>
             </div>
             <div class="radio-inline">
-              <input type="radio" value="female" name="sex" ">
+              <input type="radio" value="female" name="sex">
               <label for="woman">女性</label>
             </div>
         </div>
-      </p>
-      <p>
         <div class="form-group">
         <label for="age">Age</label>
-        <input type="text" name="age" value="age">
+        <input type="text" name="age" style="width:50px;" placeholder="年齢" value="<%= x.getString("age") %>" maxlength="3">
         </div>
-        </p>
-      <p>
       
       <div class="form-group">
       <p><label for="keep">About yourSelf</label></p>
-            <br><textarea class="form-control" style="width:300px;" name="keep" placeholder="yourself" rows="1" maxlength="60"></textarea>
-           </p>
+         <textarea class="form-control" style="width:300px;" name="keep" placeholder="趣味・好物...etc" rows="1" maxlength="100"><%= x.getString("keep")%></textarea>
         </div>
-      </p>
-      <p>
-    		<div class="form-group">
-    				<p><label for="post">Street address</label></p>
-    		  	<input type="text" name="post" class="form-control" style="width:150px;"  placeholder="郵便番号" rows="1" maxlength="7">
-    		  	
-    				<p>
-    		  	<br><textarea class="form-control" style="width:300px;" name="address" placeholder="住所" rows="1" maxlength="60"></textarea>
-    			 </p>
-    		</div>
-    	</p>
+       
+      <div class="form-group">
+      <p><label for="visits">Past visits</label></p>
+         <textarea class="form-control" style="width:300px;" name="past" placeholder="過去に旅行した場所" rows="1" maxlength="100"><%= x.getString("address") %></textarea>
+        </div>
 
+       <div class="form-group">
+    	<p><label for="post">Street address</label></p>
+            <input type="text" name="post" class="form-control" style="width:150px;"  placeholder="郵便番号" value="<%= x.getString("post") %>"rows="1" maxlength="7">	
+            <br><textarea class="form-control" style="width:300px;" name="address" placeholder="住所" rows="1" maxlength="60"><%= x.getString("past") %></textarea>
+        </div>
+       
+<% }
+
+
+ }
+      catch(SQLException e)
+{
+e.printStackTrace();
+};
+%>
+       
       <div Align="right">
        <input type="submit" value="Update" name="update"  class="btn btn-warning">
       </div>

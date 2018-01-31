@@ -20,6 +20,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv='Content-Style-Type' content='text/javascript'>
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>マイページ</title>
 
@@ -30,6 +31,7 @@
         <link href="css/img.css" rel="stylesheet">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+	<script src="js/mypage.js"></script>
 
 </head>
 <body>
@@ -67,104 +69,101 @@ fo.write(x.getBytes("image"));
 
 
       %>
-    <div class="col-xs-6 col-md-2"><center>
+     <div class="col-xs-6 col-md-2"><center>
+    　<ul class="nav nav-pills nav-stacked">
 	  <img src="Image/himu11.jpg" class="img-circle img1"></br>
-	  name:imros</br>
-	  		<form action="profile.jsp" method="post">
+	  Name:<%= nishi %> </br>
+<!--	  		<form action="profile.jsp" method="post">
 		<input type="submit" value="profile" class="btn btn-default" />
-		</form>
-	 <form action="Logoutservlet" method="post">
+		</form>-->
+<!--	 <form action="Logoutservlet" method="post">
 	 <input type="submit" value="Logout" class="btn btn-default" />
-	 </form>
-		 </div>
-	 
+	 </form>-->
+	 <li class="active"><a href="#">Menu</a></li>
+         <li><a href="mypage.jsp">Home</a></li>
+         <li><a href="profile.jsp">profile</a></li>
+	  <li><a href="sentakuinfo.jsp">選択情報</a></li>
+	  <li><a href="index.jsp">Logout</a></li>
+      </ul>
 	 </center></div>
-    
-    
-    <!-- リアルタイム -->
-     <div class="col-md-6">
+    <div class="col-md-6">
+                         <%  fo.close();
+  }
+ }
+      catch(SQLException e)
+{
+e.printStackTrace();
+}
+        %>	
+     <!-- リアルタイム -->
+     
+         <%
 
+   
+      try{
+          String quer = "select * from temppalan where Uid='"+a+"' and sentaku='NO'";
+          preparedStatement = con.prepareStatement(quer);
+ResultSet y =preparedStatement.executeQuery();
+
+ while(y.next()){ %>
          <div class="col-sm-6">
         <br>
 
       <div class="panel panel-warning">
-             <div class="panel-body"><div class="media">
+             <div class="panel-body">
+                 <div class="media">
 
                  <a class="media-left" href="#">
                  </a>
 
                  <div class="media-body">
-                <h4 class="media-heading">
-                                      <!--↓pop up-->
-          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#Modal_1">
-                             企業名
-                            </button>
-                        <!-- モーダル・ダイアログ -->
-                            <div class="modal fade" id="Modal_1" tabindex="-1">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                               <div class="modal-header">
-                               <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                                </div>
-                            <div class="modal-body">
-                              <div class="box3">
-                                <table class="teble text-left"> <!-- thの中にデータいれる -->
-                                <tr><th>企業名：</th><th></th></tr>
-                                <tr><th>コメント：</th><th></th></tr>
-                                <tr><th>評価：</th><th></th></tr>
-                                </table>
-                              </div>
+                     <h4 class="media-heading"></h4>
+                              
+                     <!--↓pop up-->
+                     <%
+                         out.println("<form action='detail.jsp' method='POST'>");
+                        out.println("<input type='submit' value='企業名' class='btn btn-warning btn-lg' >"); 
+                        out.println(y.getString("CName"));
+                        out.println("<input type='hidden' value='"+y.getString("Cid") +"' name='Cid'>");
+                        out.println("<br></form> 行き先:"+ y.getString("Des1") +"<br>IN:"+ y.getString("CheckIn") +"<br>OUT:"+ y.getString("Checkout"));
+                        out.println("<br>料金:"+ y.getString("Cost") +"<br>");
+                             
+                        out.println("<div class='panel-footer text-right'>");
+                        
+                          out.println("<form action='SentakuServlet' method='POST'>");
+                         out.println("<input type='hidden' value='"+y.getString("ID") +"' name='ID'>");
+                          out.println("<input type='hidden' value='"+y.getString("Cid") +"' name='Cid'>");
+                           out.println("<input type='hidden' value='"+y.getString("CName") +"' name='Cname'>");
+                        out.println("<input type='submit' value='選択' class='btn btn-warning btn-lg' >"); 
+                       out.println("</form>");
+                
+                         out.println("<form action='detail1.jsp' method='POST'>");
+                         out.println("<input type='hidden' value='"+y.getString("ID") +"' name='ID'>");
+                        out.println("<input type='submit' value='プラン詳細' class='btn btn-warning btn-lg' ><br>"); 
+                       out.println("</form></div>");
+                        
+                        
+                        
+     
 
-                            </div>
-<!--                            <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">提案</button>
-                            </div>-->
-                            </div>
-                    </div>
-                    </div></h4>
-                     行き先：<br>
-                     IN：<br>
-                     OUT：<br>
-                     料金：
-      </div>
-      </div>
-                 
-      <div class="panel-footer text-right">
-          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#Modal_2">
-                             プラン詳細
-                            </button>
-                        <!-- モーダル・ダイアログ -->
-                            <div class="modal fade" id="Modal_2" tabindex="-1">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                               <div class="modal-header">
-                               <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                                </div>
-                            <div class="modal-body">
-                              <div class="box3">
-                               <table class="teble text-left">  <!--thの中にデータいれる -->
-                                <tr><th>住所：</th><th></th></tr>
-                                <tr><th>趣味：</th><th></th></tr>
-                                <tr><th>過去の訪問：</th><th></th></tr>
-                                <tr><th>コメント：</th><th></th></tr>                                <br>
-                                </table>
-                              </div>
-
-                            </div>
-                            <div class="modal-footer">
-                              <form action="">
-                                <button type="button" class="btn btn-primary">提案</button>
-                              </from>
-                            </div>
-                            </div>
-                    </div>
-                    </div>
-
-       </div>
-
+     
+          
+                        
+%>
+                 </div>
   </div>
+             </div>
                   </div>
    </div>
+                                  <%  
+                                      
+  }
+ }
+      catch(SQLException e)
+{
+e.printStackTrace();
+}
+        %>
 </div>
     <!--リアルタイム部分最後-->
 
@@ -203,6 +202,10 @@ fo.write(x.getBytes("image"));
 	<option value="wakayama">和歌山県</option>
 	</select>
 </div>
+<div class="form-group">
+    <label class="control-label">人数：</label>
+    <input type="textarea" name="People" />
+</div>
   <div class="form-group">
     <label class="control-label">予算：</label>
     <select class="form-control" style="width:120px;" name="Cost">
@@ -234,13 +237,6 @@ fo.write(x.getBytes("image"));
 
 </div>
 
-                      <%  fo.close();
-  }
- }
-      catch(SQLException e)
-{
-e.printStackTrace();
-}
-        %>	
+ 
 </body>
 </html>

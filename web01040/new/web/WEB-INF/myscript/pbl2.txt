@@ -29,10 +29,11 @@ sex		varchar(5),
 address		varchar(60) ,
 keep		varchar(120),
 image	mediumblob,
-post    varchar(20)
+post    varchar(20),
+past    varchar(60)
 
 );
-# テーブル userprof の作成
+
 create table subcompany(
 Email		varchar(30) primary key,
 Pass	varchar(15),
@@ -56,12 +57,13 @@ zikan varchar(50),
 CheckIn      varchar(20),
 Checkout     varchar(20),
 count        int(5),
+people varchar(20),
 primary key(Uid)
 );
 create table temppalan(
 ID  int(10)  auto_increment,
-Cid    varchar(20),
-Uid		varchar(20),
+Cid    varchar(50),
+Uid    varchar(20),
 CName	varchar(20),
 UName	varchar(20),
 Des1    varchar(20),
@@ -70,9 +72,44 @@ Hotel	varchar(20),
 zikan varchar(50),
 CheckIn      varchar(20),
 Checkout     varchar(20),
-people        int(5),
+people        int(50),
 count           int(5),
 detal          varchar(100),
 vehicle       varchar(10),
+sentaku       varchar(5),
+feedback  varchar(10),
 primary key(ID)
+);
+
+create table cprof(
+ID    varchar(50),
+CName	varchar(20),
+detal          varchar(100),
+url       varchar(40),
+tel        varchar(15),
+rank       int(30),
+address    varchar(30),
+post varchar(30),
+primary key(ID)
+);
+
+create table pselect(
+HopeID varchar(30),
+UID    varchar(50),
+UName	varchar(30),
+CID     varchar(50),
+Payment  varchar(5),
+paid        varchar(5)
+
+);
+create table feedback(
+HopeID varchar(30),
+UID    varchar(50),
+CID    varchar(50),
+Pdetail  int(40),
+Cdetail  int(40),
+next varchar(5),
+ comment  varchar(120),
+primary key(HopeID)
+
 );

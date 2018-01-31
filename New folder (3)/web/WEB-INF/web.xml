@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+<servlet-class>mvc.register.RegisterServlet</servlet-class>
+</servlet>
+  <servlet>
+    <servlet-name>Loginservlet</servlet-name>
+<servlet-class>mvc.login.Loginservlet</servlet-class>
+</servlet>
+ <servlet>
+    <servlet-name>Logoutservlet</servlet-name>
+<servlet-class>mvc.login.Logoutservlet</servlet-class>
+ </servlet>
+ <servlet>
+    <servlet-name>Profileservlet</servlet-name>
+<servlet-class>mvc.mypage.Profileservlet</servlet-class>
+ </servlet>
+ <servlet>
+    <servlet-name>ProfileservletCompany</servlet-name>
+<servlet-class>mvc.Companypage.ProfileservletCompany</servlet-class>
+</servlet>
+
+ <servlet>
+    <servlet-name>Kakuninservlet</servlet-name>
+<servlet-class>mvc.kakunin.Kakuninservlet</servlet-class>
+</servlet>
+ <servlet>
+    <servlet-name>KibouServlet</servlet-name>
+<servlet-class>mvc.kibou.KibouServlet</servlet-class>
+</servlet>
+ <servlet>
+    <servlet-name>TeianServlet</servlet-name>
+<servlet-class>mvc.teian.TeianServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>RegisterServlet</servlet-name>
+<url-pattern>/RegisterServlet</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Loginservlet</servlet-name>
+<url-pattern>/Loginservlet</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Logoutservlet</servlet-name>
+<url-pattern>/Logoutservlet</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Profileservlet</servlet-name>
+<url-pattern>/Profileservlet</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+<servlet-name>ProfileservletCompany</servlet-name>
+<url-pattern>/ProfileservletCompany</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Kakuninservlet</servlet-name>
+<url-pattern>/Kakuninservlet</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>KibouServlet</servlet-name>
+<url-pattern>/KibouServlet</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>TeianServlet</servlet-name>
+<url-pattern>/TeianServlet</url-pattern>
+</servlet-mapping>
+
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
